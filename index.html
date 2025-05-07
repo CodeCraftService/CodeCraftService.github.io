@@ -3,69 +3,224 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CodeCraft는 디지털 콘텐츠와 사람을 연결하는 1인 광고대행사입니다. 실거래가 기반 사이트 운영, 멘토링, 자동화 시스템을 제공합니다.">
-  <title>CodeCraft | 1인 광고·콘텐츠 운영 대행</title>
+  <title>CodeCraft | 콘텐츠로 연결하는 기술</title>
+  <meta name="description" content="CodeCraft는 찾아요홈즈, 라이프114, 테스트그램, 더커리어23 등 다양한 콘텐츠 플랫폼을 운영하는 1인 디지털 광고·운영 대행사입니다.">
   <link rel="icon" href="https://avatars.githubusercontent.com/u/42509800?v=4">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background: #f9f9f9; }
-    header { background: #fff; border-bottom: 1px solid #eee; padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 1000; }
-    header img { height: 48px; border-radius: 50%; }
-    header h1 { font-size: 1.5rem; margin-left: 1rem; display: inline-block; vertical-align: middle; }
-    .hero { text-align: center; padding: 5rem 2rem; background: linear-gradient(to right, #f9fbfc, #f1f4f7); }
-    .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; font-weight: 600; }
-    .hero p { font-size: 1.2rem; color: #555; }
-    .hero img { max-width: 800px; width: 100%; margin-top: 2rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-    .section { padding: 4rem 2rem; background: #fff; text-align: center; }
-    .section h3 { font-size: 1.8rem; margin-bottom: 2rem; }
-    .section img { max-width: 800px; width: 100%; margin-top: 2rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); }
-    .footer { text-align: center; font-size: 0.9rem; color: #888; padding: 2rem 0; background: #fff; }
-    a { color: #0073e6; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    nav a { margin: 0 1rem; font-weight: 500; color: #333; }
-    nav a:hover { color: #0073e6; }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #fff; color: #333; }
+    header { padding: 1.5rem 2rem; background: #fff; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
+    .logo-header { height: 40px; object-fit: cover; border-radius: 8px; }
+    nav a { margin: 0 1rem; text-decoration: none; color: #333; font-weight: 500; }
+    nav a:hover { color: #6a11cb; }
+    .section { padding: 6rem 2rem; text-align: center; background: #fff; }
+    .section h3 { font-size: 2rem; margin-bottom: 2rem; }
+    .service-card { max-width: 1000px; margin: 0 auto 6rem; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .service-card img { width: 100%; display: block; transition: transform 0.5s ease, opacity 0.5s ease; }
+    .service-card:hover img { transform: scale(1.03); opacity: 0.95; }
+    .highlight-section {
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, #5e4db2, #b077e7);
+      color: #fff;
+      text-align: center;
+    }
+    .highlight-section h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #c8ff73;
+      margin-bottom: 1rem;
+    }
+    .highlight-section p {
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+    .highlight-cards {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+    .highlight-card {
+      max-width: 300px;
+      border-top: 3px solid #c8ff73;
+      padding: 2rem 1rem;
+    }
+    .highlight-card h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    .highlight-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .footer { text-align: center; padding: 3rem 2rem; background: #f8f8f8; color: #666; font-size: 0.9rem; }
+    @media (max-width: 768px) {
+      .section h3, .highlight-section h2 { font-size: 1.8rem; }
+      .highlight-cards { flex-direction: column; align-items: center; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <div style="display: flex; align-items: center;">
-      <img src="https://avatars.githubusercontent.com/u/42509800?v=4" alt="CodeCraft 로고">
-      <h1>CodeCraft</h1>
-    </div>
+    <div style="
+    width: 180px;
+    height: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  ">
+    <div style="
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      background: url('https://avatars.githubusercontent.com/u/42509800?v=4') center center / contain no-repeat;
+    "></div>
+  </div>
+  
+
     <nav>
       <a href="#services">서비스</a>
       <a href="#mentoring">멘토링</a>
-      <a href="#contact">문의하기</a>
+      <a href="#contact">문의</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>디지털 콘텐츠와 사람을 연결하는<br>1인 광고·운영 서비스, CodeCraft</h2>
-    <p>SEO 기반 사이트 운영부터 실거래가 콘텐츠, 멘토링, 자동화까지<br>지속 가능한 디지털 수익 시스템을 구축합니다.</p>
-    <img src="https://purpleo.co.kr/img/pf_03.8a36504b.jpg" alt="CodeCraft 서비스 목업 이미지">
+  <section class="highlight-section">
+    <h2>CODECRAFT</h2>
+    <p>
+      콘텐츠 중심의 IT 웹 서비스를 직접 기획하고 운영하며,<br>
+      IT 관련 커리어 컨설팅을 통해 개인의 성장을 지원하는<br>
+      <strong>IT 전문 기업 </strong>입니다.
+    </p>
+  
+    <div class="highlight-cards">
+        <div class="highlight-card">
+          <h4>생활 밀착형 웹서비스 운영</h4>
+          <p>
+            부동산 실거래가 정보, 병원·공공시설·교육기관 등의 생활 인프라, 지역 기반 채용공고 등<br>
+            일상에 꼭 필요한 정보를 누구나 쉽게 접근할 수 있도록 기획하고 개발합니다.
+          </p>
+        </div>
+      
+        <div class="highlight-card">
+          <h4>IT 커리어 컨설팅</h4>
+          <p>
+            신입 개발자를 위한 첫걸음부터 경력 이직을 준비하는 실무자까지,<br>
+            현업 개발자의 실전 경험을 바탕으로 한 맞춤형 멘토링을 제공합니다.
+          </p>
+        </div>
+      
+        <div class="highlight-card">
+          <h4>끊임없는 고민과 개발</h4>
+          <p>
+            CodeCraft는 단순한 개발을 넘어, 사람들의 삶을 더 편리하게 만들기 위한 방향을 끊임없이 고민합니다.
+          </p>
+        </div>
+      </div>
+      
   </section>
+  
 
   <section class="section" id="services">
-    <h3>📌 운영 중인 주요 서비스</h3>
-    <p>찾아요 홈즈, 라이프114, 더커리어23, 테스트그램을 통해<br>공공데이터·부동산·취업·심리콘텐츠를 제공합니다.</p>
-    <img src="https://purpleo.co.kr/img/pf_01.72e039bd.jpg" alt="서비스 설명 이미지 1">
-    <img src="https://purpleo.co.kr/img/pf_02.5ce68640.jpg" alt="서비스 설명 이미지 2">
+    <h3>🌐 대표 서비스</h3>
+    <div class="service-card" data-aos="fade-up">
+      <a href="https://ayo.pe.kr">
+        <img src="https://github.com/SEUNGJOOMOON/SEUNGJOOMOON.github.io/blob/master/img/ayo.png?raw=true" alt="찾아요 홈즈">
+      </a>
+    </div>
+    <div class="service-card" data-aos="fade-up">
+      <a href="https://114-service.co.kr">
+        <img src="https://github.com/SEUNGJOOMOON/SEUNGJOOMOON.github.io/blob/master/img/life114.png?raw=true" alt="라이프114">
+      </a>
+    </div>
+    <div class="service-card" data-aos="fade-up">
+      <a href="https://testgram.ayo.pe.kr">
+        <img src="https://github.com/SEUNGJOOMOON/SEUNGJOOMOON.github.io/blob/master/img/testgram.png?raw=true" alt="테스트그램">
+      </a>
+    </div>
+    <div class="service-card" data-aos="fade-up">
+      <a href="https://thecareer23.co.kr">
+        <img src="https://github.com/SEUNGJOOMOON/SEUNGJOOMOON.github.io/blob/master/img/thecareer23.png?raw=true" alt="더커리어23">
+      </a>
+    </div>
   </section>
 
-  <section class="section" id="mentoring">
-    <h3>🎓 멘토링 및 커리어 컨설팅</h3>
-    <p>인프런에서 115명 이상과 함께한 실전 멘토링 경험<br>
-    개발 이직, 취업 전략, 포트폴리오 코칭까지 모두 커버합니다.</p>
-    <p><a href="https://www.inflearn.com/users/@moon4250">👉 인프런 멘토링 페이지 보기</a></p>
+  <section class="section" id="mentoring" style="background: #f8f9fc;">
+    <h3 style="font-size: 2.4rem; font-weight: bold; margin-bottom: 1rem;">🎓 성장과 도전을 함께하는 실전 멘토링</h3>
+    <p style="font-size: 1.1rem; color: #555;">
+      SI부터 스타트업, 대기업까지<br>
+      전문대에서 대학원까지 성장 여정을 이어온<br>
+      <strong>8년 차 현직 개발자</strong>와 함께하는 실전 중심 멘토링입니다.
+    </p>
+  
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 4rem;">
+  
+      <!-- 학력 배경 -->
+      <div style="background: #fff; border-radius: 12px; padding: 2rem; width: 300px; box-shadow: 0 5px 20px rgba(0,0,0,0.06);">
+        <h4 style="font-size: 1.2rem; margin-bottom: 1rem;">🧠 <strong>학력 배경</strong></h4>
+        <ul style="padding-left: 0; list-style: none; font-size: 0.95rem; color: #333; line-height: 1.6;">
+          <li>정보기술대학원 IT공학 석사</li>
+          <li>방송통신대학교 컴퓨터과학과 학사</li>
+          <li>컴퓨터정보과 전문학사</li>
+          <li>KH정보교육원 Java 개발자 과정 수료</li>
+        </ul>
+      </div>
+  
+      <!-- 커리어 경력 -->
+      <div style="background: #fff; border-radius: 12px; padding: 2rem; width: 300px; box-shadow: 0 5px 20px rgba(0,0,0,0.06);">
+        <h4 style="font-size: 1.2rem; margin-bottom: 1rem;">💼 <strong>커리어 경력</strong></h4>
+        <ul style="padding-left: 0; list-style: none; font-size: 0.95rem; color: #333; line-height: 1.6;">
+          <li>코드크래프트 1인 기업 운영</li>
+          <li>대기업 웹서비스 개발 및 운영 (월 300만 PV)</li>
+          <li>핀테크 스타트업 백엔드 API 개발</li>
+          <li>콘텐츠 유통·정산 시스템 개발</li>
+          <li>웹 프론트엔드 구축 (10만 유저)</li>
+          <li>SI 기업 공공 프로젝트 다수 수행</li>
+        </ul>
+      </div>
+  
+      <!-- 멘토링 주제 -->
+      <div style="background: #fff; border-radius: 12px; padding: 2rem; width: 300px; box-shadow: 0 5px 20px rgba(0,0,0,0.06);">
+        <h4 style="font-size: 1.2rem; margin-bottom: 1rem;">🧭 <strong>멘토링 주제</strong></h4>
+        <ul style="padding-left: 0; list-style: none; font-size: 0.95rem; color: #333; line-height: 1.6;">
+          <li>개발 입문 전 마음가짐 & 전략</li>
+          <li>학위 고민 (전문학사 vs 방통대 vs 대학원)</li>
+          <li>SI → 서비스 기업 커리어 전환</li>
+          <li>기업 유형별 커리어 현실 비교</li>
+          <li>이력서·포트폴리오·자기소개서 피드백</li>
+          <li>기술 면접 준비 & 실전 조언</li>
+        </ul>
+      </div>
+  
+    </div>
+  
+    <p style="margin-top: 3rem;">
+      <a href="https://mentoring.inflearn.com/mentors/1417" target="_blank" style="display: inline-block; background: #0073e6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: bold; text-decoration: none;">
+        👉 인프런 멘토링 페이지 보기
+      </a>
+    </p>
   </section>
+  
+  
 
   <section class="section" id="contact">
     <h3>📬 연락 및 제휴</h3>
-    <p>이메일: <a href="mailto:code@code-craft-service.com">code@code-craft-service.com</a></p>
-    <p>제휴 및 제안은 이메일 또는 Notion/구글폼을 통해 보내주세요.</p>
+    <p>이메일: <a href="mailto:director@code-craft-service.com">director@code-craft-service.com</a></p>
+    <p>제휴 또는 제안 관련 문의는 위 이메일로 편하게 보내주세요.</p>
   </section>
-
+  
   <div class="footer">
-    ⓒ 2025 CodeCraft | 1인 콘텐츠 운영 및 광고 대행 서비스
+    <p><strong>코드크래프트 (CodeCraft)</strong><br>
+    IT 웹 서비스 운영 & IT 커리어 컨설팅</p>
+    <p>사업자 등록번호 : 428-33-01205</p>
+    <p>© Copyright Since 2023 코드크래프트. All rights reserved.</p>
   </div>
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
