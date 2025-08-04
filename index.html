@@ -3,225 +3,268 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CodeCraft | 생활과 IT를 연결하는 디지털 솔루션</title>
-  <meta name="description" content="CodeCraft는 실생활 데이터 기반 웹 서비스 운영과 IT 커리어 멘토링을 제공하는 디지털 솔루션 기업입니다." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://code-craft-service.com/" />
-  <meta property="og:title" content="CodeCraft | 생활과 IT를 연결하는 디지털 솔루션" />
-  <meta property="og:description" content="CodeCraft는 실생활 데이터 기반 웹 서비스 운영과 IT 커리어 멘토링을 제공하는 디지털 솔루션 기업입니다." />
-  <meta property="og:image" content="img/og-image.svg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+  <title>CodeCraft | 생활을 바꾸는 디지털 혁신</title>
+  <meta name="description" content="CodeCraft는 실생활 기반 IT 서비스와 멘토링으로 일상을 변화시키는 디지털 크리에이터 그룹입니다." />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { font-family: 'Noto Sans KR', 'Segoe UI', sans-serif; color:#333; background:#fff; }
-    header { background:#fff; box-shadow:0 2px 4px rgba(0,0,0,0.04); }
+    :root {
+      --cc-primary: #4f68ff;
+      --cc-dark: #0f0f2d;
+      --cc-light: #f3f6ff;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: white;
+      color: #111;
+    }
+    header {
+      background: var(--cc-dark);
+      padding: 1rem 2rem;
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+    }
     .hero {
-      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1556761175-4b46a572b786") center/cover no-repeat;
-      color:#fff; padding:160px 20px 120px; text-align:center; }
-    .hero h1 { font-size:2.5rem; font-weight:700; }
-    .hero p { font-size:1.1rem; }
-    .hero .btn-primary { background:#4F68FF; border:none; }
-    section[id] { scroll-margin-top:80px; border-top:1px solid #e9ecef; padding-top:4rem !important; }
-    .section-title { font-size:2rem; font-weight:700; text-align:center; margin-bottom:1.5rem; }
-    .service-card img { height:160px; object-fit:cover; width:100%; }
-    .service-card:hover { transform:translateY(-4px); box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1); transition:transform .3s, box-shadow .3s; }
-    .footer { background:#f8f9fa; color:#666; text-align:center; padding:2rem 1rem; border-top:1px solid #e9ecef; }
-    .mentoring-section { background-color:#0b1023; background-image:url("https://www.transparenttextures.com/patterns/dark-mosaic.png"); color:white; }
-    .mentoring-section h2 { font-size:2rem; font-weight:bold; }
-    .mentoring-section p { color:#bbb; }
-    .mentoring-section ul li strong { color:#c8ff73; }
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('https://ayo.pe.kr/resources/img/blog/1754190826_a15369aa93187005d209.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      max-width: 800px;
+    }
+    .hero .btn {
+      margin-top: 2rem;
+      background: var(--cc-primary);
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 40px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 4rem 0 2rem;
+    }
+    .service-bar {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .service-box {
+      background: #f8f9fc;
+      padding: 1.5rem;
+      text-align: center;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .service-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    .service-box .emoji {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .service-box h5 {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .service-box p {
+      font-size: 0.9rem;
+      color: #555;
+      min-height: 50px;
+    }
+    .service-box a {
+      font-size: 0.85rem;
+      color: var(--cc-primary);
+      text-decoration: none;
+    }
+    .mentoring-section {
+      padding: 5rem 1rem;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)), url('https://ayo.pe.kr/resources/img/blog/1754190826_a15369aa93187005d209.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+    }
+    .mentoring-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .mentoring-section p {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    .mentoring-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .mentoring-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      backdrop-filter: blur(4px);
+      width: 250px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .mentoring-card .emoji {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .mentoring-card h5 {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .mentoring-card p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+    .contact-section {
+      padding: 4rem 1rem;
+      background: var(--cc-light);
+      text-align: center;
+    }
+    .contact-section h2 {
+      margin-bottom: 1rem;
+    }
+    .contact-section p {
+      margin-bottom: 2rem;
+      color: #444;
+    }
+    .contact-section a {
+      background: var(--cc-primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+    }
+    footer {
+      background: #111;
+      color: #aaa;
+      padding: 2rem;
+      text-align: center;
+    }
+    @media (max-width: 992px) {
+      .service-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 576px) {
+      .service-bar {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 <body>
-
-  <header class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="img/logo.svg" alt="CodeCraft logo" height="32">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">회사소개</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">서비스</a></li>
-          <li class="nav-item"><a class="nav-link" href="#mentoring">멘토링</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">문의</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
+  <header>CodeCraft</header>
 
   <section class="hero">
-    <div class="container">
-      <h1 data-aos="fade-up">IT와 생활을 연결하는 고민</h1>
-      <p data-aos="fade-up" data-aos-delay="100">
-        실생활에 밀접한 정보 서비스와<br>
-        실무 중심의 IT 커리어 멘토링을 함께 제공합니다.
-      </p>
-    </div>
+    <h1>생활과 IT를 연결하는<br>디지털 솔루션</h1>
+    <p>실생활 밀착형 정보 플랫폼과 커리어 멘토링으로<br>당신의 일상을 더 나은 방향으로 이끌어갑니다.</p>
+    <a href="#services" class="btn">서비스 살펴보기</a>
   </section>
-<section id="about" class="py-5">
-  <div class="container">
-    <h2 class="text-center fw-bold display-6 mb-5">생활과 IT를 연결하는 - CodeCraft</h2>
-    <div class="row g-4">
 
-     <div class="col-md-6 col-lg-4" data-aos="fade-up">
-  <div class="bg-white border rounded p-4 h-100 shadow-sm">
-    <img src="https://cdn-icons-png.flaticon.com/512/3208/3208707.png" alt="웹 서비스 운영" class="mb-3" width="40">
-    <h5 class="fw-bold">IT 웹 서비스 운영</h5>
-    <p class="text-muted small mb-0">
-      부동산, 공공시설, 교육 정보, 채용 공고 등<br>
-      다양한 생활 데이터를 기반으로 누구나 쉽게 활용할 수 있는<br>
-      실용적인 웹 서비스를 직접 기획하고 운영합니다.
-    </p>
-  </div>
-</div>
-
-<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-  <div class="bg-white border rounded p-4 h-100 shadow-sm">
-    <img src="https://cdn-icons-png.flaticon.com/512/4369/4369800.png" alt="커리어 멘토링" class="mb-3" width="40">
-    <h5 class="fw-bold">현업 기반 멘토링</h5>
-    <p class="text-muted small mb-0">
-      신입 개발자부터 커리어 전환을 준비하는 실무자까지.<br>
-      실제 현장에서의 경험을 바탕으로 실전 중심의 조언과 피드백을 제공하며,<br>
-      더 나은 방향으로 성장할 수 있도록 지원합니다.
-    </p>
-  </div>
-</div>
-
-<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-  <div class="bg-white border rounded p-4 h-100 shadow-sm">
-    <img src="https://cdn-icons-png.flaticon.com/512/1048/1048949.png" alt="IT와 생활을 잇는 고민" class="mb-3" width="40">
-    <h5 class="fw-bold">IT와 생활을 연결하는 고민</h5>
-    <p class="text-muted small mb-0">
-      단순한 기술 개발을 넘어서, 사람들이 실제로 겪는 문제를<br>
-      IT의 시선으로 해석하고 해결하는 방법을 끊임없이 고민합니다.<br>
-      꾸준히 개선하고, 더 나은 일상을 만드는 것이 목표입니다.
-    </p>
-  </div>
-</div>
-
-    </div>
-  </div>
-</section>
-
-
-<section id="services" class="py-5" style="background-color: #f3f6ff;">
-  <div class="container">
-    <div class="row align-items-center mb-5">
-      <div class="col-lg-5" data-aos="fade-right">
-        <h2 class="fw-bold display-6 mb-3">대표 서비스</h2>
-        <p class="text-muted">
-          실생활 기반의 IT 서비스부터 커리어 컨설팅까지,<br>
-          다양한 분야의 플랫폼을 직접 개발하고 운영하고 있습니다.
-        </p>
+  <section id="services">
+    <h2 class="section-title">대표 서비스</h2>
+    <div class="service-bar">
+      <div class="service-box">
+        <div class="emoji">🏡</div>
+        <h5>찾아요! 홈즈</h5>
+        <p>실거래가 기반 부동산 정보 제공으로 내 집 마련을 돕는 플랫폼</p>
+        <a href="https://ayo.pe.kr">ayo.pe.kr</a>
       </div>
-    </div>
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
-
-      <div class="col" data-aos="fade-up">
-        <a href="https://ayo.pe.kr" class="text-decoration-none text-dark">
-          <div class="bg-white rounded shadow-sm overflow-hidden h-100 service-card">
-            <img src="img/ayo.png" alt="찾아줘 홈즈">
-            <div class="p-3">
-              <h6 class="fw-bold mb-1">찾아줘 홈즈</h6>
-              <p class="small text-muted mb-0">실거래가 기반 부동산 정보 플랫폼</p>
-            </div>
-          </div>
-        </a>
+      <div class="service-box">
+        <div class="emoji">📍</div>
+        <h5>지역누리</h5>
+        <p>공공 인프라 정보를 한눈에! 지역 기반 생활정보 플랫폼</p>
+        <a href="https://local.114-service.co.kr">바로가기</a>
       </div>
-
-      <div class="col" data-aos="fade-up" data-aos-delay="100">
-        <a href="#" class="text-decoration-none text-dark">
-          <div class="bg-white rounded shadow-sm overflow-hidden h-100 service-card">
-            <img src="img/life114.png" alt="지역누리">
-            <div class="p-3">
-              <h6 class="fw-bold mb-1">지역누리</h6>
-              <p class="small text-muted mb-0">우리지역 생활 인프라 정보 플랫폼</p>
-            </div>
-          </div>
-        </a>
+      <div class="service-box">
+        <div class="emoji">🧭</div>
+        <h5>더커리어23</h5>
+        <p>채용 정보와 취업 콘텐츠를 큐레이션하는 커리어 가이드</p>
+        <a href="https://thecareer23.co.kr">바로가기</a>
       </div>
-      <div class="col" data-aos="fade-up" data-aos-delay="300">
-        <a href="https://thecareer23.co.kr" class="text-decoration-none text-dark">
-          <div class="bg-white rounded shadow-sm overflow-hidden h-100 service-card">
-            <img src="img/thecareer23.png" alt="더커리어23">
-            <div class="p-3">
-              <h6 class="fw-bold mb-1">더커리어23</h6>
-              <p class="small text-muted mb-0">채용공고 및 취업 콘텐츠 큐레이션</p>
-            </div>
-          </div>
-        </a>
+      <div class="service-box">
+        <div class="emoji">🧪</div>
+        <h5>테스트그램</h5>
+        <p>재미있는 성향 테스트로 보는 나의 캐릭터와 취향</p>
+        <a href="https://testgram.ayo.pe.kr">바로가기</a>
       </div>
-    </div>
-  </div>
-</section>
-
-
-  <section id="mentoring" class="py-5 mentoring-section">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-up">
-          <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0" class="img-fluid rounded shadow" alt="멘토링 이미지" />
-        </div>
-        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <h2 class="fw-bold display-6 mb-3">실전 경험으로 완성된<br> IT 커리어 멘토링</h2>
-          <p class="mb-4">
-            다양한 개발 환경과 기업을 거치며 축적한 경험을 바탕으로,<br>
-            입문자부터 경력자까지 현실적인 조언을 제공합니다.
-          </p>
-          <ul class="list-unstyled">
-            <li class="mb-2"><strong>✔</strong> 학위/커리어 전환 전략</li>
-            <li class="mb-2"><strong>✔</strong> 이력서 및 포트폴리오 피드백</li>
-            <li class="mb-2"><strong>✔</strong> 실전 기술면접 조언</li>
-            <li class="mb-2"><strong>✔</strong> 현업 중심 개발자 로드맵</li>
-          </ul>
-          <a href="https://mentoring.inflearn.com/mentors/1417" target="_blank" class="btn btn-warning mt-3 fw-bold px-4">멘토링 상세 보기</a>
-        </div>
+      <div class="service-box">
+        <div class="emoji">🛒</div>
+        <h5>찾아요! 마켓</h5>
+        <p>집 관련 상품과 라이프스타일을 연결하는 스마트 마켓</p>
+        <a href="https://store.ayo.pe.kr">바로가기</a>
       </div>
     </div>
   </section>
 
-<section id="contact" class="py-5 bg-light">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 text-center">
-        <h2 class="section-title">📬 문의 및 제휴</h2>
-        <p class="lead mb-4">
-          CodeCraft와 함께할 협력 아이디어가 있으신가요?<br>
-          다양한 플랫폼을 운영하며 쌓아온 경험을 바탕으로 의미 있는 제휴 제안을 환영합니다.
-        </p>
-        <p class="mb-3">
-          웹사이트, 멘토링, 콘텐츠 운영 등과 관련된 문의도 가능하며,<br>
-          자유롭게 제안 내용을 보내주시면 내부 검토 후 성실히 회신드리겠습니다.
-        </p>
-        <p class="fs-5 fw-bold">
-          📧 <a href="mailto:director@code-craft-service.com">director@code-craft-service.com</a>
-        </p>
-        <p class="text-muted small mt-4">
-          회신은 영업일 기준 최대한 빠르게 드리며,<br>
-          파트너십 및 네트워킹을 위한 건설적인 논의를 기다리고 있습니다.
-        </p>
+  <section id="mentoring" class="mentoring-section">
+    <h2>실전 경험으로 완성된<br>IT 커리어 멘토링</h2>
+    <p>
+      다양한 개발 환경과 기업을 거치며 축적한 경험을 바탕으로,<br>
+      입문자부터 경력자까지 현실적인 조언과 피드백을 제공합니다.<br>
+      취업에 필요한 실전 기술부터 장기적인 커리어 전략까지 함께 고민합니다.
+    </p>
+    <div class="mentoring-cards">
+      <div class="mentoring-card">
+        <div class="emoji">🎯</div>
+        <h5>커리어 전환 전략</h5>
+        <p>전공자/비전공자 모두를 위한 실질적인 학위 및 커리어 전환 로드맵</p>
+      </div>
+      <div class="mentoring-card">
+        <div class="emoji">📄</div>
+        <h5>이력서 & 포트폴리오</h5>
+        <p>현업 관점에서 피드백하는 서류 준비 및 포트폴리오 구성법</p>
+      </div>
+      <div class="mentoring-card">
+        <div class="emoji">💬</div>
+        <h5>기술면접 코칭</h5>
+        <p>실제 면접관 시점으로 준비하는 백엔드/프론트 기술 면접 팁</p>
+      </div>
+      <div class="mentoring-card">
+        <div class="emoji">🚀</div>
+        <h5>개발자 성장 로드맵</h5>
+        <p>실무와 커뮤니케이션 능력을 키워가는 개발자 경력 설계</p>
       </div>
     </div>
-  </div>
-</section>
+    <a href="https://mentoring.inflearn.com/mentors/1417" target="_blank" class="btn btn-primary mt-4">멘토링 자세히 보기 →</a>
+  </section>
 
+  <section class="contact-section">
+    <h2>문의 및 제휴</h2>
+    <p>CodeCraft와의 협업, 인터뷰 요청, 강의 의뢰 등 다양한 제안을 기다립니다.<br>메일로 연락주세요.</p>
+    <a href="mailto:moonseungju.dev@gmail.com">메일 보내기</a>
+  </section>
 
-  <footer class="footer">
-    <p><strong>CodeCraft</strong> | IT 웹서비스 운영 & 커리어 컨설팅</p>
-    <p>사업자등록번호: 428-33-01205 | Since 2023</p>
-    <p>&copy; 2025 CodeCraft. All rights reserved.</p>
+  <footer>
+    <p><strong>CodeCraft</strong> | 생활과 IT를 연결하는 디지털 솔루션</p>
+    <p>ⓒ 2025 CodeCraft. All rights reserved.</p>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
 </body>
 </html>
