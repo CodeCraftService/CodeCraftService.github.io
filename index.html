@@ -3,169 +3,453 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="CodeCraft는 실생활 기반 IT 서비스와 멘토링으로 일상을 변화시키는 디지털 크리에이터 그룹입니다." />
+  <meta name="description" content="CodeCraft는 데이터와 기술로 일상을 변화시키는 디지털 크리에이터 그룹입니다." />
   <meta name="author" content="CodeCraft" />
-  <title>CodeCraft | 생활을 바꾸는 디지털 혁신</title>
+  <title>CodeCraft | 데이터를 통한 일상의 혁신</title>
 
-  <!-- Favicon-->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <!-- Font Awesome icons (free version)-->
+  
   <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-  <!-- Google fonts-->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Core theme CSS (includes Bootstrap)-->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+  
   <link href="css/styles.css" rel="stylesheet" />
+
   <style>
-    :root { --cc-primary:#4f68ff; --cc-dark:#0f0f2d; --cc-light:#f3f6ff; }
-    body { font-family:'Roboto',sans-serif; }
-    .navbar-brand { font-family:'Orbitron',sans-serif; font-weight:700; }
+    /* --- CodeCraft Custom Modern Theme --- */
+    :root {
+      --cc-primary: #3b82f6; /* Vivid Blue: 혁신과 신뢰 */
+      --cc-primary-dark: #2563eb;
+      --cc-dark-bg: #0f172a; /* Slate 900: 깊이감 있는 배경 */
+      --cc-card-bg: #ffffff;
+      --cc-text-main: #1e293b;
+      --cc-text-sub: #64748b;
+      --cc-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: var(--cc-text-main);
+      background-color: #f8fafc;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    #mainNav {
+      background-color: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+    #mainNav .navbar-brand {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 800;
+      color: #fff;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+    }
+    #mainNav .navbar-brand span { color: var(--cc-primary); }
+    #mainNav .nav-link {
+      font-weight: 500;
+      color: #cbd5e1 !important;
+      font-size: 0.95rem;
+      transition: 0.3s;
+      margin-left: 1rem;
+    }
+    #mainNav .nav-link:hover, #mainNav .nav-link.active {
+      color: #fff !important;
+      text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
     header.masthead {
       position: relative;
-      padding-top: 12rem;
-      padding-bottom: 12rem;
-      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.85)), 
-        url('https://ayo.pe.kr/resources/img/blog/1754190826_a15369aa93187005d209.jpg') center/cover no-repeat;
+      background: var(--cc-dark-bg);
+      background-image: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.2) 0%, transparent 20%),
+                        radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 20%);
+      padding-top: 14rem;
+      padding-bottom: 11rem;
+      text-align: center;
+      overflow: hidden;
     }
-    header.masthead .masthead-heading { font-family:'Orbitron',sans-serif; font-size: 3rem; }
-    header.masthead .masthead-subheading { font-size: 1.15rem; opacity:.95; }
-    .cc-section-title { text-align:center; font-size:2rem; font-weight:700; margin: 4rem 0 2rem; }
-    .service-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:1.5rem; }
-    .service-card { background:#f8f9fc; border-radius:1rem; padding:1.5rem; box-shadow:0 4px 8px rgba(0,0,0,.05); transition:.3s; min-height: 300px; display:flex; flex-direction:column; }
-    .service-card:hover { transform: translateY(-6px); box-shadow:0 10px 20px rgba(0,0,0,.1); }
-    .service-emoji { font-size:2rem; margin-bottom:.25rem; }
-    .service-card h5 { font-weight:700; }
-    .service-card p { color:#555; font-size:.95rem; flex:1; }
-    .service-card a { color: var(--cc-primary); font-weight:700; text-decoration:none; }
+    /* 배경 이미지 오버레이 (IT 느낌) */
+    header.masthead::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop') center/cover no-repeat;
+      opacity: 0.15; 
+      mix-blend-mode: overlay;
+      z-index: 0;
+    }
+    header.masthead .container { position: relative; z-index: 1; }
+    
+    .masthead-subheading {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--cc-primary);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .masthead-heading {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin-bottom: 2.5rem;
+      color: white;
+      line-height: 1.3;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .text-gradient {
+      background: var(--cc-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .btn-primary-cc {
+      background: var(--cc-primary);
+      border: none;
+      padding: 1.1rem 2.8rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      color: white;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    }
+    .btn-primary-cc:hover {
+      background: var(--cc-primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.6);
+      color: white;
+    }
+
+    /* Section Styles */
+    .page-section { padding: 7rem 0; }
+    .section-heading {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: var(--cc-text-main);
+      font-size: 2.5rem;
+    }
+    .section-subheading {
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 1.15rem;
+      color: var(--cc-text-sub);
+      margin-bottom: 5rem;
+      font-weight: 400;
+    }
+
+    /* Services Grid */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+    }
+    .service-card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 3rem 2rem;
+      transition: all 0.4s ease;
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 4px; height: 100%;
+      background: var(--cc-gradient);
+      opacity: 0;
+      transition: 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
+    }
+    .service-card:hover::before { opacity: 1; }
+    
+    .service-icon-box {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: #eff6ff;
+      color: var(--cc-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.8rem;
+      transition: 0.3s;
+    }
+    .service-card:hover .service-icon-box {
+      background: var(--cc-primary);
+      color: white;
+      transform: rotate(-10deg);
+    }
+    .service-card h4 {
+      font-weight: 800;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      color: var(--cc-text-main);
+    }
+    .service-card p {
+      color: var(--cc-text-sub);
+      font-size: 1rem;
+      line-height: 1.65;
+      margin-bottom: 2rem;
+      flex-grow: 1;
+    }
+    .service-link {
+      color: var(--cc-text-main);
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+    .service-link i { margin-left: 8px; transition: 0.2s; color: var(--cc-primary); }
+    .service-link:hover { color: var(--cc-primary); }
+    .service-link:hover i { margin-left: 12px; }
+
+    /* Mentoring Section */
     .mentoring-section {
-      padding:5rem 0;
-      background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.85)),
-        url('https://ayo.pe.kr/resources/img/blog/1754309972_6ab8839eb9ec2063b544.jpg') center/cover no-repeat;
-      color:#fff; text-align:center;
+      background: var(--cc-dark-bg);
+      color: white;
+      padding: 7rem 0;
+      position: relative;
+      background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), url('assets/img/header-bg.jpg');
+      background-size: cover;
+      background-attachment: fixed;
     }
-    .mentoring-section h2 { font-size:2.4rem; margin-bottom:1rem; }
-    .mentoring-section p { max-width:860px; margin:0 auto 2rem; color:#d9d9d9; }
-    .mentoring-cards { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:2rem; }
-    .mentoring-card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:1rem; padding:1.25rem; width:250px; }
-    .mentoring-card .emoji { font-size:2rem; }
-    .contact-section { background: var(--cc-light); padding:5rem 0; }
-    .contact-section p { max-width:900px; margin:0 auto 2rem; }
-    footer.footer { background:#111; color:#ccc; }
+    .mentoring-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 1.25rem;
+      padding: 2.5rem 1.5rem;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+      height: 100%;
+    }
+    .mentoring-card:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-5px);
+      border-color: rgba(255,255,255,0.3);
+    }
+    .mentoring-card h5 { font-weight: 700; margin-top: 1.2rem; color: #fff; font-size: 1.2rem; }
+    .mentoring-card p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 0; line-height: 1.5; margin-top: 0.5rem;}
+    .mentoring-card .emoji { font-size: 3rem; margin-bottom: 0.5rem; display: block; }
+
+    /* Contact Section */
+    .contact-section {
+      background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+    
+    /* Footer */
+    footer {
+      background: #fff;
+      border-top: 1px solid #e2e8f0;
+      color: var(--cc-text-sub);
+      padding: 2rem 0;
+    }
+    footer .h5 { font-family: 'Orbitron', sans-serif; }
+    
+    @media (max-width: 768px) {
+      .masthead-heading { font-size: 2.5rem; }
+      .service-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body id="page-top">
-  <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand" href="#page-top">CodeCraft</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        메뉴
-        <i class="fas fa-bars ms-1"></i>
+      <a class="navbar-brand" href="#page-top">Code<span>Craft</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="color:white; border-color: rgba(255,255,255,0.1);">
+        <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#services">서비스</a></li>
-          <li class="nav-item"><a class="nav-link" href="#mentoring">멘토링</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">문의</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mentoring">Mentoring</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Masthead-->
-  <header class="masthead text-white text-center">
+  <header class="masthead">
     <div class="container">
-      <div class="masthead-subheading">생활과 IT를 연결하는 디지털 솔루션</div>
-      <div class="masthead-heading text-uppercase">CodeCraft</div>
-      <a class="btn btn-primary btn-xl text-uppercase mt-3" href="#services">서비스 살펴보기</a>
+      <div class="masthead-subheading">Data-Driven Innovation</div>
+      <div class="masthead-heading text-uppercase">
+        데이터와 기술로<br>
+        <span class="text-gradient">일상을 혁신합니다</span>
+      </div>
+      <a class="btn btn-primary-cc btn-xl text-uppercase" href="#services">Our Products</a>
     </div>
   </header>
 
-  <!-- Services-->
   <section id="services" class="page-section">
     <div class="container">
-      <h2 class="cc-section-title">대표 서비스</h2>
+      <div class="text-center">
+        <h2 class="section-heading">Our Products</h2>
+        <h3 class="section-subheading">사용자의 삶에 가치를 더하는 CodeCraft의 핵심 서비스입니다.</h3>
+      </div>
+      
       <div class="service-grid">
         <div class="service-card">
-          <div class="service-emoji">🏡</div>
-          <h5>찾아요! 홈즈</h5>
-          <p>실거래가 데이터를 기반으로 아파트, 빌라, 오피스텔의 매물과 시세를 분석해 내 집 마련을 돕는 부동산 정보 플랫폼입니다.</p>
-          <a href="https://ayo.pe.kr" target="_blank" rel="noopener">바로가기</a>
+          <div class="service-icon-box">
+            <i class="fas fa-house-chimney"></i>
+          </div>
+          <h4>찾아요! 홈즈</h4>
+          <p>
+            "내 집 마련의 기준이 되다."<br>
+            국토부 실거래가 데이터와 주변 인프라(학군, 교통) 분석을 통해 투명하고 정확한 부동산 정보를 제공하는 올인원 플랫폼입니다.
+          </p>
+          <a href="https://ayo.pe.kr" target="_blank" class="service-link">
+            Visit Website <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
+
         <div class="service-card">
-          <div class="service-emoji">📍</div>
-          <h5>지역누리</h5>
-          <p>도서관, 공원, 체육시설 등 전국의 공공시설 정보를 한눈에 제공하는 지역 생활 정보 서비스입니다.</p>
-          <a href="https://local.114-service.co.kr" target="_blank" rel="noopener">바로가기</a>
+          <div class="service-icon-box">
+            <i class="fas fa-map-location-dot"></i>
+          </div>
+          <h4>타운커넥트</h4>
+          <p>
+            "우리 동네의 모든 생활 정보."<br>
+            지역 생활, 복지, 일자리부터 숨은 맛집까지. 주민과 소상공인을 연결하는 현대판 생활 정보 교차로 서비스입니다.
+          </p>
+          <a href="https://local.114-service.co.kr" target="_blank" class="service-link">
+            Visit Website <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
+
         <div class="service-card">
-          <div class="service-emoji">🧭</div>
-          <h5>더커리어23</h5>
-          <p>채용 공고, 취업 후기, 포트폴리오 예시 등 IT 취업을 위한 콘텐츠를 큐레이션하는 커리어 가이드 서비스입니다.</p>
-          <a href="https://thecareer23.co.kr" target="_blank" rel="noopener">바로가기</a>
+          <div class="service-icon-box">
+            <i class="fas fa-flask"></i>
+          </div>
+          <h4>테스트그램</h4>
+          <p>
+            "나도 몰랐던 나를 발견하다."<br>
+            MBTI 성향 분석, 심리 테스트 등 다채로운 인터랙티브 콘텐츠로 사용자의 참여를 이끄는 심리 엔터테인먼트 플랫폼입니다.
+          </p>
+          <a href="https://testgram.ayo.pe.kr" target="_blank" class="service-link">
+            Visit Website <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
+
         <div class="service-card">
-          <div class="service-emoji">🧪</div>
-          <h5>테스트그램</h5>
-          <p>나의 성격, 커리어 성향, 사회적 유형 등을 알아볼 수 있는 밈 기반 테스트 콘텐츠 플랫폼입니다.</p>
-          <a href="https://testgram.ayo.pe.kr" target="_blank" rel="noopener">바로가기</a>
+          <div class="service-icon-box">
+            <i class="fas fa-car-side"></i>
+          </div>
+          <h4>모비스테이션</h4>
+          <p>
+            "운전자가 쓰는, 운전자를 위한 생활형 자동차 커뮤니티."<br>
+            주차장·주유소·정비소 정보부터실제 운전자들의 경험과 후기까지 공유되는 공간입니다.
+          </p>
+          <a href="https://mobistation.co.kr" target="_blank" class="service-link">
+            Visit Website <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Mentoring-->
   <section id="mentoring" class="mentoring-section">
     <div class="container">
-      <h2>실전 경험으로 완성된 IT 커리어 멘토링</h2>
-      <p>다양한 개발 환경과 기업을 거치며 축적한 경험을 바탕으로, 입문자부터 경력자까지 현실적인 조언과 피드백을 제공합니다. 취업에 필요한 실전 기술부터 장기적인 커리어 전략까지 함께 고민합니다.</p>
-      <div class="mentoring-cards">
-        <div class="mentoring-card">
-          <div class="emoji">🎯</div>
-          <h5>커리어 전환 전략</h5>
-          <p>전공자/비전공자 모두를 위한 실질적인 학위 및 커리어 전환 로드맵</p>
+      <div class="text-center mb-5">
+        <h2 class="section-heading text-white">Career Mentoring</h2>
+        <p class="text-muted" style="color:#94a3b8 !important; max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+          현업 개발자의 경험과 노하우로,<br>단순한 기술 교육을 넘어 성공적인 커리어 로드맵을 함께 설계합니다.
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="mentoring-card text-center">
+            <span class="emoji">🎯</span>
+            <h5>커리어 전환 전략</h5>
+            <p>비전공자를 위한<br>현실적이고 구체적인<br>개발자 전환 가이드</p>
+          </div>
         </div>
-        <div class="mentoring-card">
-          <div class="emoji">📄</div>
-          <h5>이력서 & 포트폴리오</h5>
-          <p>현업 관점에서 피드백하는 서류 준비 및 포트폴리오 구성법</p>
+        <div class="col-lg-3 col-md-6">
+          <div class="mentoring-card text-center">
+            <span class="emoji">📄</span>
+            <h5>서류 클리닉</h5>
+            <p>합격률을 높이는<br>이력서 첨삭 및<br>매력적인 포트폴리오 구성</p>
+          </div>
         </div>
-        <div class="mentoring-card">
-          <div class="emoji">💬</div>
-          <h5>기술면접 코칭</h5>
-          <p>실제 면접관 시점으로 준비하는 백엔드/프론트 기술 면접 팁</p>
+        <div class="col-lg-3 col-md-6">
+          <div class="mentoring-card text-center">
+            <span class="emoji">💬</span>
+            <h5>기술 면접 코칭</h5>
+            <p>CS 지식부터 라이브 코딩까지<br>면접관 관점의<br>실전 모의 면접</p>
+          </div>
         </div>
-        <div class="mentoring-card">
-          <div class="emoji">🚀</div>
-          <h5>개발자 성장 로드맵</h5>
-          <p>실무와 커뮤니케이션 능력을 키워가는 개발자 경력 설계</p>
+        <div class="col-lg-3 col-md-6">
+          <div class="mentoring-card text-center">
+            <span class="emoji">🚀</span>
+            <h5>성장 로드맵</h5>
+            <p>주니어부터 시니어까지<br>장기적인 커리어<br>성장 전략 수립</p>
+          </div>
         </div>
       </div>
-      <a href="https://mentoring.inflearn.com/mentors/1417" target="_blank" class="btn btn-primary mt-4">멘토링 자세히 보기 →</a>
+      <div class="text-center mt-5">
+        <a href="https://mentoring.inflearn.com/mentors/1417" target="_blank" class="btn btn-outline-light btn-xl rounded-pill px-5">멘토링 신청하기</a>
+      </div>
     </div>
   </section>
 
-  <!-- Contact-->
   <section id="contact" class="page-section contact-section">
     <div class="container text-center">
-      <h2 class="section-heading text-uppercase">문의 및 제휴</h2>
-      <p style="color:white;">CodeCraft는 다양한 협업 기회를 기다리고 있습니다.<br><br>
-      문의 : <a href="mailto:director@code-craft-service.com">director@code-craft-service.com</a></p>
-      <a class="btn btn-primary btn-xl text-uppercase" href="mailto:director@code-craft-service.com">문의하기</a>
+      <h2 class="section-heading">Contact Us</h2>
+      <h3 class="section-subheading">새로운 비즈니스 기회와 협업 제안은 언제나 환영합니다.</h3>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="p-5 bg-white rounded-4 shadow-sm border">
+            <i class="fas fa-paper-plane text-primary mb-3" style="font-size: 3rem;"></i>
+            <h4 class="fw-bold mb-3">프로젝트 문의하기</h4>
+            <p class="text-muted mb-4">
+              CodeCraft는 데이터 기술을 활용한 다양한 프로젝트를 기다리고 있습니다.<br>
+              아래 이메일로 편하게 연락주세요. 빠르게 답변 드리겠습니다.
+            </p>
+            <a class="btn btn-primary-cc btn-lg" href="mailto:director@code-craft-service.com">
+              <i class="fas fa-envelope me-2"></i> director@code-craft-service.com
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Footer-->
-  <footer class="footer py-5">
-    <div class="container text-center">
-      <div class="mb-2"><strong>회사 정보</strong><br>코드크래프트 (CodeCraft)</div>
-      <div class="mb-2">사업자등록번호: 428-33-01205</div>
-      <div>© Since 2023 코드크래프트. All rights reserved. (© 2025)</div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 text-lg-start mb-3 mb-lg-0">
+          <div class="h5 fw-bold text-dark mb-1">CodeCraft</div>
+        </div>
+        <div class="col-lg-4 text-center mb-3 mb-lg-0">
+          <div class="small">Copyright &copy; CodeCraft 2025</div>
+        </div>
+      </div>
     </div>
   </footer>
 
-  <!-- Bootstrap core JS-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
 </body>
 </html>
