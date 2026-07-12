@@ -1,149 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>CodeCraft</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="코드크래프트는 부동산 데이터 서비스 찾아요! 홈즈를 만들고 운영합니다.">
+  <meta property="og:title" content="코드크래프트 | 찾아요! 홈즈 운영사">
+  <meta property="og:description" content="집을 찾는 모든 순간에 필요한 데이터를 더 쉽고 투명하게.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://code-craft-service.com/img/ayo.png">
+  <title>코드크래프트 | 찾아요! 홈즈 운영사</title>
+  <link rel="icon" href="img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <style>
-    :root {
-      --bg: #ffffff;
-      --text: #0f172a;
-      --sub: #475569;
-      --mute: #94a3b8;
-      --border: #e5e7eb;
-      --accent: #2563eb;
-    }
-
-    * { box-sizing: border-box; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-
-    html, body { margin: 0; padding: 0; background: var(--bg); }
-
-    body {
-      font-family: 'Pretendard Variable', Pretendard, 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-      color: var(--text);
-      line-height: 1.7;
-      letter-spacing: -0.01em;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .wrap {
-      flex: 1;
-      width: 100%;
-      max-width: 640px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    main { padding: 12vh 0 8vh; }
-
-    .brand {
-      font-family: 'Inter', sans-serif;
-      font-weight: 800;
-      font-size: 1.05rem;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      margin-bottom: 3rem;
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      line-height: 1.3;
-      margin: 0 0 1.4rem;
-    }
-    h1 .grad {
-      background: linear-gradient(120deg, var(--accent), #0ea5e9);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .lede {
-      font-size: 1.05rem;
-      color: var(--sub);
-      margin: 0 0 2.2rem;
-      max-width: 540px;
-    }
-
-    .note {
-      font-size: 0.95rem;
-      color: var(--sub);
-      margin: 0 0 2.6rem;
-      max-width: 540px;
-    }
-
-    .contact {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.98rem;
-      font-weight: 600;
-      color: var(--text);
-      text-decoration: none;
-      border: 1px solid var(--border);
-      padding: 11px 18px;
-      border-radius: 10px;
-      transition: all 0.2s ease;
-      align-self: flex-start;
-    }
-    .contact:hover {
-      background: var(--text);
-      color: #fff;
-      border-color: var(--text);
-    }
-
-    footer {
-      padding: 2rem 0 2.5rem;
-      color: var(--mute);
-      font-size: 0.82rem;
-      text-align: center;
-    }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 1.8rem; }
-      main { padding: 10vh 0 6vh; }
-    }
+    :root{--ink:#101828;--sub:#536178;--line:#e7ebf1;--blue:#2563eb;--deep:#163b8f;--soft:#f3f7ff;--white:#fff;--max:1180px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}a{color:inherit}.container{width:min(var(--max),calc(100% - 40px));margin:auto}.nav{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(231,235,241,.8);background:rgba(255,255,255,.88);backdrop-filter:blur(14px)}.nav-inner{height:70px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:18px;font-weight:900;letter-spacing:-.03em}.brand-mark{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--blue);color:#fff;font-size:14px}.nav-links{display:flex;align-items:center;gap:28px}.nav-links a{text-decoration:none;color:#475467;font-size:14px;font-weight:700}.nav-links .product-link{padding:10px 16px;border-radius:10px;background:var(--ink);color:#fff}.hero{position:relative;overflow:hidden;padding:108px 0 94px;background:linear-gradient(145deg,#fff 30%,#f1f6ff)}.hero:after{content:"";position:absolute;width:560px;height:560px;right:-180px;top:-230px;border-radius:50%;background:radial-gradient(circle,#cfe0ff 0,rgba(219,232,255,.55) 35%,transparent 70%)}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:22px;color:var(--blue);font-size:13px;font-weight:900}.eyebrow:before{content:"";width:24px;height:2px;background:var(--blue)}h1{margin:0;font-size:clamp(42px,5vw,68px);line-height:1.12;letter-spacing:-.055em}.hero h1 span{color:var(--blue)}.hero-copy{max-width:610px;margin:25px 0 34px;color:var(--sub);font-size:19px;line-height:1.75}.hero-actions{display:flex;gap:11px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 21px;border:1px solid var(--line);border-radius:12px;background:#fff;text-decoration:none;font-size:15px;font-weight:850}.btn.primary{border-color:var(--blue);background:var(--blue);color:#fff;box-shadow:0 12px 28px rgba(37,99,235,.22)}.product-window{position:relative;padding:10px;border:1px solid #dbe4f3;border-radius:24px;background:#fff;box-shadow:0 28px 70px rgba(23,54,108,.18);transform:rotate(1.4deg)}.product-window img{display:block;width:100%;border-radius:16px}.product-badge{position:absolute;right:-18px;bottom:25px;padding:13px 16px;border-radius:14px;background:#fff;box-shadow:0 14px 35px rgba(16,24,40,.14);font-size:13px;font-weight:850}.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}.trust-item{padding:29px 24px;border-left:1px solid var(--line)}.trust-item:first-child{border-left:0}.trust-item strong{display:block;font-size:18px;font-weight:900}.trust-item span{display:block;margin-top:5px;color:#7b8799;font-size:12px}.section{padding:110px 0}.section.soft{background:#f7f9fc}.section-head{max-width:690px;margin-bottom:48px}.section-head small{color:var(--blue);font-size:12px;font-weight:900;letter-spacing:.12em}.section-head h2{margin:10px 0 15px;font-size:clamp(31px,4vw,46px);line-height:1.2;letter-spacing:-.045em}.section-head p{margin:0;color:var(--sub);font-size:17px}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{min-height:240px;padding:28px;border:1px solid var(--line);border-radius:20px;background:#fff;transition:.2s}.feature:hover{transform:translateY(-4px);box-shadow:0 18px 45px rgba(30,58,110,.08)}.feature-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:var(--soft);font-size:23px}.feature h3{margin:22px 0 9px;font-size:20px}.feature p{margin:0;color:var(--sub);font-size:14px;line-height:1.7}.mission-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}.mission-quote{position:sticky;top:110px;padding:32px;border-radius:22px;background:linear-gradient(145deg,var(--deep),#2f6ee7);color:#fff}.mission-quote strong{display:block;font-size:27px;line-height:1.4;letter-spacing:-.035em}.mission-quote span{display:block;margin-top:20px;color:rgba(255,255,255,.7);font-size:13px}.principles{display:grid;gap:8px}.principle{display:grid;grid-template-columns:46px 1fr;gap:17px;padding:23px 4px;border-bottom:1px solid var(--line)}.principle b{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#eaf1ff;color:var(--blue);font-size:13px}.principle h3{margin:0 0 6px;font-size:18px}.principle p{margin:0;color:var(--sub);font-size:14px}.cta{padding:0 0 110px}.cta-box{display:flex;align-items:center;justify-content:space-between;gap:35px;padding:55px 60px;border-radius:26px;background:#101828;color:#fff}.cta-box h2{margin:0 0 10px;font-size:34px;letter-spacing:-.04em}.cta-box p{margin:0;color:#aeb8c8}.cta-box .btn{flex:none;border-color:#fff}.footer{padding:38px 0;border-top:1px solid var(--line)}.footer-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:30px}.footer strong{font-size:16px}.footer p{margin:8px 0 0;color:#7b8799;font-size:12px}.footer a{color:#475467;font-size:13px;text-decoration:none}@media(max-width:800px){.nav-links a:not(.product-link){display:none}.hero{padding:72px 0}.hero-grid,.mission-grid{grid-template-columns:1fr;gap:45px}.product-window{transform:none}.trust-grid{grid-template-columns:repeat(2,1fr)}.trust-item:nth-child(3){border-top:1px solid var(--line);border-left:0}.trust-item:nth-child(4){border-top:1px solid var(--line)}.feature-grid{grid-template-columns:1fr}.feature{min-height:0}.section{padding:76px 0}.mission-quote{position:static}.cta{padding-bottom:76px}.cta-box{align-items:flex-start;flex-direction:column;padding:36px 28px}.footer-inner{align-items:flex-start;flex-direction:column}}@media(max-width:480px){.container{width:min(100% - 28px,var(--max))}.hero h1{font-size:39px}.hero-copy{font-size:16px}.trust-item{padding:22px 14px}.trust-item strong{font-size:15px}.product-badge{right:8px}.cta-box h2{font-size:27px}}
   </style>
 </head>
-
 <body>
-  <div class="wrap">
-    <main>
-      <div class="brand">&lt;CodeCraft/&gt;</div>
-
-      <h1>
-        여러 가지 실험을 통해<br>
-        <span class="grad">IT 서비스를 만드는 개발자</span>
-      </h1>
-
-      <p class="lede">
-        작은 아이디어를 직접 코드로 옮겨보고, 만들고 부수고 다시 만들면서
-        쓸모 있는 서비스로 다듬어 갑니다.
-      </p>
-
-      <p class="note">
-        혼자 기획부터 개발, 운영까지 굴려보는 사이드 실험들의 기록입니다.
-        새로운 시도와 협업에 대한 이야기는 언제나 환영합니다.
-      </p>
-
-      <a href="mailto:director@code-craft-service.com" class="contact">
-        ✉ director@code-craft-service.com
-      </a>
-    </main>
-  </div>
-
-  <footer>
-    © 2026 CodeCraft
-  </footer>
+  <header class="nav"><div class="container nav-inner"><a class="brand" href="#top"><span class="brand-mark">CC</span>코드크래프트</a><nav class="nav-links"><a href="#product">서비스</a><a href="#principles">운영 원칙</a><a href="mailto:director@code-craft-service.com">문의</a><a class="product-link" href="https://ayo.pe.kr" target="_blank" rel="noreferrer">찾아요! 홈즈 열기 ↗</a></nav></div></header>
+  <main id="top">
+    <section class="hero"><div class="container hero-grid"><div><div class="eyebrow">REAL ESTATE DATA COMPANY</div><h1>집을 찾는 모든 순간,<br><span>더 나은 데이터</span>로.</h1><p class="hero-copy">코드크래프트는 부동산 실거래가 서비스 <b>찾아요! 홈즈</b>를 만들고 운영합니다. 흩어진 공공데이터를 누구나 이해하고 활용할 수 있는 정보로 바꿉니다.</p><div class="hero-actions"><a class="btn primary" href="https://ayo.pe.kr" target="_blank" rel="noreferrer">웹 서비스 바로가기</a><a class="btn" href="https://m.ayo.pe.kr" target="_blank" rel="noreferrer">모바일 앱 보기</a></div></div><div class="product-window"><img src="img/ayo.png" alt="찾아요! 홈즈 부동산 정보 서비스"><div class="product-badge">매일 갱신되는 부동산 데이터</div></div></div></section>
+    <section class="trust"><div class="container trust-grid"><div class="trust-item"><strong>실거래가</strong><span>아파트 · 빌라 · 오피스텔</span></div><div class="trust-item"><strong>청약·분양</strong><span>일정과 공급 정보를 한곳에</span></div><div class="trust-item"><strong>경매·공매</strong><span>온비드 기반 물건 정보</span></div><div class="trust-item"><strong>대출금리</strong><span>금융회사 공시상품 비교</span></div></div></section>
+    <section class="section" id="product"><div class="container"><div class="section-head"><small>FIND YOUR HOME</small><h2>부동산 의사결정에 필요한 정보를<br>한 서비스에 담았습니다.</h2><p>단순한 목록 제공을 넘어 시세, 일정, 지역 정보와 금융 정보를 자연스럽게 이어 줍니다.</p></div><div class="feature-grid"><article class="feature"><div class="feature-icon">🏢</div><h3>실거래가 탐색</h3><p>국토교통부 실거래 데이터를 자체 색인해 지역과 단지명으로 빠르게 탐색하고, 매매·전세·월세 흐름을 함께 확인합니다.</p></article><article class="feature"><div class="feature-icon">🏗️</div><h3>청약과 경매</h3><p>청약 일정, 공급 정보, 분양가와 공매·경매 물건을 구조화해 집을 찾는 다양한 선택지를 연결합니다.</p></article><article class="feature"><div class="feature-icon">✨</div><h3>AI 홈즈와 지역 정보</h3><p>공개된 상세 데이터를 기반으로 질문하고, 주변 생활 인프라와 실제 지역 이야기를 함께 살펴볼 수 있습니다.</p></article></div></div></section>
+    <section class="section soft" id="principles"><div class="container mission-grid"><aside class="mission-quote"><strong>정보의 차이가<br>집을 찾는 경험의 차이가<br>되지 않도록.</strong><span>CodeCraft · Find Holmes</span></aside><div class="principles"><div class="section-head"><small>HOW WE OPERATE</small><h2>서비스를 직접 만들고<br>매일 운영합니다.</h2></div><div class="principle"><b>01</b><div><h3>공공데이터를 더 이해하기 쉽게</h3><p>복잡한 원천 데이터를 검색과 비교에 적합한 형태로 정리해 사용자 언어로 제공합니다.</p></div></div><div class="principle"><b>02</b><div><h3>광고보다 정보의 맥락을 먼저</h3><p>사용자가 실거래에서 금융, 지역과 일정 정보로 자연스럽게 이동하도록 제품 경험을 설계합니다.</p></div></div><div class="principle"><b>03</b><div><h3>출시 이후가 진짜 시작</h3><p>웹과 모바일 앱을 직접 개발·배포하고 실제 이용 흐름을 바탕으로 지속적으로 개선합니다.</p></div></div><div class="principle"><b>04</b><div><h3>누구나 바로 쓸 수 있게</h3><p>회원가입 장벽 없이 필요한 부동산 정보를 확인할 수 있는 접근 가능한 서비스를 지향합니다.</p></div></div></div></div></section>
+    <section class="cta"><div class="container cta-box"><div><h2>지금, 찾아요! 홈즈를 만나보세요.</h2><p>실거래가부터 청약·경매·대출금리까지 한곳에서 확인할 수 있습니다.</p></div><a class="btn primary" href="https://ayo.pe.kr" target="_blank" rel="noreferrer">서비스 시작하기 ↗</a></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><div><strong>코드크래프트</strong><p>부동산 데이터 서비스 찾아요! 홈즈 운영사<br>© 2026 CodeCraft. All rights reserved.</p></div><a href="mailto:director@code-craft-service.com">director@code-craft-service.com</a></div></footer>
 </body>
 </html>
