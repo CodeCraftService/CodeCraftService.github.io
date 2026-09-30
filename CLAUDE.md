@@ -2,9 +2,10 @@
 
 찾아요!홈즈 소개용 정적 랜딩 페이지. GitHub Pages(`master`)로 서빙된다.
 
-## 공통 지침 (워크스페이스 공유)
-푸시 정책, docu 기록, 하네스/훅 원칙은 아래 공통문서를 따른다. **실행·배포 명령은 이 문서의 프로젝트별 절을 우선**한다.
-@/Users/codecraft/Desktop/01.workspace/md-common/CLAUDE_COMMON.md
+## 워크스페이스 공통 지침 비적용 (독립 프로젝트)
+`etc/`·`ext/` 는 실험·외부 협업 영역이라 워크스페이스 공통 지침(`md-common/`)과 공통 하네스(`ws-orchestrator`·공통 에이전트/스킬)를 **따르지 않는다**(2026-09-30 사용자 지시).
+상위 `01.workspace/CLAUDE.md` 가 같이 읽혀도 그 공통 규칙·하네스 트리거는 적용하지 않는다. **이 문서만 따른다.**
+기본값: 푸시·배포·발행은 사용자가 요청할 때만 한다. 비밀값은 커밋하지 않는다.
 
 ## 구성 · 확인
 - `index.html`(섹션: realty / subscription / community / ai), `css/styles.css`, `js/scripts.js`, `img/`, `assets/favicon.ico`

@@ -1,12 +1,9 @@
 # AGENTS — codecraft-site (code-craft-service.com 소개 사이트)
 
-## Common References (워크스페이스 공유)
+## 워크스페이스 공통 지침 비적용 (독립 프로젝트)
 
-- /Users/codecraft/Desktop/01.workspace/md-common/AGENTS_COMMON.md
-- /Users/codecraft/Desktop/01.workspace/md-common/HARNESS_ENGINEERING.md
-- /Users/codecraft/Desktop/01.workspace/md-common/HOOK_ENGINEERING.md
-
-> 실행·배포 명령은 프로젝트별로 다르다. 본 프로젝트는 아래 스택별 명령과 `CLAUDE.md` 를 우선한다.
+- `etc/`·`ext/` 는 실험·외부 협업 영역이라 `md-common/`(AGENTS_COMMON·HARNESS·HOOK)과 공통 하네스를 따르지 않는다(2026-09-30). 이 문서와 `CLAUDE.md` 만 따른다.
+- 기본값: 푸시·배포·발행은 사용자가 요청할 때만. 비밀값 커밋 금지.
 
 ## Stack & Dev (Project Specific)
 
