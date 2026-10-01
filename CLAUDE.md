@@ -16,4 +16,4 @@
 - `CNAME`(code-craft-service.com) 삭제 금지 — 지우면 커스텀 도메인이 끊긴다.
 - 앱 CTA 는 Google Play `kr.pe.ayo.app` 로 연결된다(찾아요! 홈즈 앱, `java/m.ayo.pe.kr`). 패키지명이 바뀌면 함께 고친다.
 - 서비스 문구 변경 시 `<meta name="description">` 과 `og:description` 도 같이 갱신한다.
-- 문서: `/Users/codecraft/Desktop/01.workspace/docu/ext/codecraft-site/README.md` (changelog 파일 없음)
+- 문서: `/Users/codecraft/workspace/docu/ext/codecraft-site/README.md` (changelog 파일 없음)

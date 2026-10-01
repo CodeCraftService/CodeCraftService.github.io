@@ -15,4 +15,4 @@
 
 - **`master` push = 즉시 공개 배포**(GitHub Pages). 커스텀 도메인은 `CNAME` 파일이 지정하므로 삭제 금지.
 - 앱 CTA 는 Google Play `kr.pe.ayo.app` 로 연결된다 — 패키지명 변경 시 함께 수정한다.
-- changelog 파일은 없다. 변경은 `/Users/codecraft/Desktop/01.workspace/docu/ext/codecraft-site/README.md` 에 반영한다.
+- changelog 파일은 없다. 변경은 `/Users/codecraft/workspace/docu/ext/codecraft-site/README.md` 에 반영한다.
